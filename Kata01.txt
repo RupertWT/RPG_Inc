@@ -46,10 +46,21 @@ If 'John The Bagger' would have stayed alive, the last line would have been
 If 'Mark The Fister' would have stayed alive, the last line would have been
 'Mark The Fister'
 
-// RMWT NOTES: N,attacker,defender,weapon,damage,c1health_post_attack,c2health_post_attack
-
 Time ticks where nothing happens, are written as 
 
 N,NOTHING
 
 In the result.rpg file, where N is the time tick.
+
+
+
+
+
+
+
+//	RMWT NOTES: name,speed,health,weapon,damage
+//	'Mark the Fister', 4, 8, 'Iron Fist', 4
+//	'John the Bagger', 1, 7, 'Small Bag', 1
+	
+//	RMWT NOTES: N,attacker,defender,weapon,damage,c1health_post_attack,c2health_post_attack	
+//	1,'John The Bagger','Mark The Fister','Small Bag',1,7,7	
