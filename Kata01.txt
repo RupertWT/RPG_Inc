@@ -46,6 +46,8 @@ If 'John The Bagger' would have stayed alive, the last line would have been
 If 'Mark The Fister' would have stayed alive, the last line would have been
 'Mark The Fister'
 
+// RMWT NOTES: N,attacker,defender,weapon,damage,c1health_post_attack,c2health_post_attack
+
 Time ticks where nothing happens, are written as 
 
 N,NOTHING
