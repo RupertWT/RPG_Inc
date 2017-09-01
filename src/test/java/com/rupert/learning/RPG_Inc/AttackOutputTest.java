@@ -8,8 +8,8 @@ public class AttackOutputTest {
     
     @Test
     public void returnAttackOutput() {
-    	AttackOutput AO = new AttackOutput (1,"'John The Bagger'","'Mark The Fister'","'Small Bag'",1,7,7);
-    	assertEquals("1, 'John The Bagger', 'Mark The Fister', 'Small Bag', 1, 7, 7",AO.toString());
+    	AttackOutput attackOutput = new AttackOutput (1,"'John the Bagger'","'Mark the Fister'","'Small Bag'",1,7,7);
+    	assertEquals("1, 'John the Bagger', 'Mark the Fister', 'Small Bag', 1, 7, 7",attackOutput.toString());
     }
     
 }

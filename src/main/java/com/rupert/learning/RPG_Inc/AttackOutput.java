@@ -12,7 +12,8 @@ public class AttackOutput {
    
     public AttackOutput(int round, String attacker, String defender, String weapon, 
     		int damage, int c1health, int c2health) {
-        this.round = round;
+       
+    	this.round = round;
         this.attacker = attacker;
         this.defender = defender;
         this.weapon = weapon;
