@@ -4,6 +4,7 @@ public class CombatEngine {
 	
 	CombatantOne combatantOne;
 	CombatantTwo combatantTwo;
+	AttackOutput attackOutput;
 
     public CombatEngine(CombatantOne combatantOne, CombatantTwo combatantTwo) {
         this.combatantOne = combatantOne;
