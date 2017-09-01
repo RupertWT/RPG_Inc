@@ -14,28 +14,31 @@ public class CombatEngine {
 	
     public String battle() {
     	
-    	//round1 battle
-    	attackOutput.round=1;
+    	String battleResults = "";
     	
-    	if (combatantOne.speed <= combatantTwo.speed) {
-    		attackOutput.attacker= combatantOne.name;
-    		attackOutput.defender= combatantTwo.name;
-    		attackOutput.weapon=combatantOne.weapon;
-    		attackOutput.damage=combatantOne.damage;
-    		attackOutput.c1health=combatantOne.health;
-        	attackOutput.c2health=combatantTwo.health-attackOutput.damage; 
-    	} else {
-    		attackOutput.attacker= combatantTwo.name;
-    		attackOutput.defender= combatantOne.name;
-    		attackOutput.weapon=combatantTwo.weapon;
-    		attackOutput.damage=combatantTwo.damage;
-    		attackOutput.c1health=combatantOne.health-attackOutput.damage;
-        	attackOutput.c2health=combatantTwo.health; 
-    	}
+		attackOutput.attacker = combatantTwo.name;
+		attackOutput.defender = combatantOne.name;
+		attackOutput.c1health = combatantOne.health;
+		attackOutput.c2health = combatantTwo.health;
+		attackOutput.weapon = combatantTwo.weapon;
+		attackOutput.damage = combatantTwo.damage;
+		
+		for (int i = 1; attackOutput.c1health > 0; i++) {
+			attackOutput.round = i;
+			attackOutput.c1health = attackOutput.c1health-attackOutput.damage; 
+	    	attackOutput.c2health = attackOutput.c2health;
+	    	
+	    	battleResults += attackOutput.round + ", " + attackOutput.attacker + ", " + attackOutput.defender 
+	    			+ ", " + attackOutput.weapon + ", " + attackOutput.damage 
+	    			+ ", " + attackOutput.c1health + ", " + attackOutput.c2health;
+	    	
+	    	if (attackOutput.c1health!=0) {
+	    		battleResults += "\n";
+	    	}
+		}
     	
-    	return attackOutput.round + ", " + attackOutput.attacker + ", " + attackOutput.defender 
-    			+ ", " + attackOutput.weapon + ", " + attackOutput.damage 
-    			+ ", " + attackOutput.c1health + ", " + attackOutput.c2health;
+		System.out.println(battleResults);
+    	return battleResults;
             	
     }
 	
