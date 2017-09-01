@@ -28,6 +28,8 @@ public class CombatEngine {
 			attackOutput.c1health = attackOutput.c1health-attackOutput.damage; 
 	    	attackOutput.c2health = attackOutput.c2health;
 	    	
+	    	
+	    	
 	    	battleResults += attackOutput.round + ", " + attackOutput.attacker + ", " + attackOutput.defender 
 	    			+ ", " + attackOutput.weapon + ", " + attackOutput.damage 
 	    			+ ", " + attackOutput.c1health + ", " + attackOutput.c2health;
@@ -35,6 +37,13 @@ public class CombatEngine {
 	    	if (attackOutput.c1health!=0) {
 	    		battleResults += "\n";
 	    	}
+	    	
+	    	if (attackOutput.c1health==0) {
+	    		attackOutput.round = i+1;
+	    		battleResults += "\n"
+	    				+ attackOutput.round + ", " + attackOutput.defender + ", Dead";
+	    	}
+	    	
 		}
     	
 		System.out.println(battleResults);

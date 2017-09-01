@@ -20,7 +20,8 @@ public class CombatEngineTest {
     			+ "5, 'John the Bagger', 'Mark the Fister', 'Small Bag', 1, 3, 7\n"
     			+ "6, 'John the Bagger', 'Mark the Fister', 'Small Bag', 1, 2, 7\n"
     			+ "7, 'John the Bagger', 'Mark the Fister', 'Small Bag', 1, 1, 7\n"
-    			+ "8, 'John the Bagger', 'Mark the Fister', 'Small Bag', 1, 0, 7",combatResult.battle()); 
+    			+ "8, 'John the Bagger', 'Mark the Fister', 'Small Bag', 1, 0, 7\n"
+    			+ "9, 'Mark the Fister', Dead",combatResult.battle()); 
  		
     }
     
